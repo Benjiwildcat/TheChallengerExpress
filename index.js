@@ -11,9 +11,19 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static('public'));
 
 
-// GET request for reviews
-app.get('/api/example', (req, res) => {
-  res.status(200).json({ example: 1 });
+
+app.get('/api/notes', (req, res) => {
+  res.sendFile(path.join(__dirname, '/public/notes.html'))
+
+
+  res.status(200).json({ notes: 1 });
+});
+app.post('/api/notes', (req, res) => {
+
+
+
+
+  res.status(200).json();
 });
 
 
